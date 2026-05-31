@@ -1,13 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bastien — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --orange: #FF4D00;
+      --beige:  #F2EDE8;
+      --dark:   #1A1A18;
+      --mid:    #888880;
+      --serif:  'Playfair Display', Georgia, serif;
+      --sans:   'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--beige);
+      color: var(--dark);
+      font-family: var(--sans);
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 3rem;
+      background: var(--beige);
+    }
+
+    .nav-logo {
+      font-family: var(--sans);
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      color: var(--dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    #hero {
+      min-height: 100vh;
+      padding: 8rem 3rem 4rem;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-email {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1rem;
+      opacity: 0.6;
+      margin-bottom: 2rem;
+    }
+
+    .hero-title-wrap { position: relative; }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-weight: 900;
+      font-size: clamp(5rem, 14vw, 14rem);
+      line-height: 0.9;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-photo {
+      position: absolute;
+      right: 0;
+      top: -2rem;
+      width: 42%;
+      max-width: 520px;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-bio {
+      max-width: 420px;
+      padding-top: 3rem;
+    }
+
+    .hero-bio p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Hello world!</h1>
+
+  <nav>
+    <a href="#hero" class="nav-logo">BASTIEN</a>
+    <ul class="nav-links">
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#apropos">À propos</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero">
+    <p class="hero-email">tonemail@email.com</p>
+
+    <div class="hero-title-wrap">
+      <h1 class="hero-title">PORTFOLIO<br>PORTFOLIO</h1>
+
+      <div class="hero-photo">
+        <!-- Remplace "ta-photo.jpg" par le nom de ton fichier image -->
+        <img src="ta-photo.jpg" alt="Bastien" />
+      </div>
+    </div>
+
+    <div class="hero-bio">
+      <!-- Remplace ce texte par ta présentation -->
+      <p>Je suis Bastien, étudiant en Communication & Marketing digital à Bordeaux.</p>
+    </div>
+  </section>
+
 </body>
-    <h2>Mon premier site web</h2>
 </html>
